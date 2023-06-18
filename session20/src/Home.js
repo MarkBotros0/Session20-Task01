@@ -3,7 +3,6 @@ import Cards from './components/Cards'
 import Header from './components/Header.js'
 
 const Home = () => {
-
     const myData = [
         { id: 0, featured: true, new: true, title: "Photosnap", img: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQCy91cU4g2SzCjic4VzB2F_EzyIt51FNu5swkx2bdgnV7fCIbc", position: "Senior Frontend Developer", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem animi dicta cumque optio earum temporibus. Voluptate, nobis! Quas asperiores consectetur provident qui necessitatibus hic repellat nisi dignissimos dicta odit, ratione ullam expedita culpa quo vitae fugit cumque excepturi beatae?", createdOn: "1d ago", enrollment: "Full Time", place: "USA Only", filters: ["Frontend", "Senior", "HTML", "CSS", "JavaScript"] },
         { id: 1, featured: true, new: true, title: "Manage", img: "https://www.shell.com/etc.clientlibs/settings/wcm/designs/shell-rio/clientlibs/themes/theme-shell/resources/logo/logo.svg", position: "Fullstack Develorper", desc: "", createdOn: "1d ago", enrollment: "Full Time", place: "USA Only", filters: ["Fullstack", "Midweight", "Python", "React"] },
