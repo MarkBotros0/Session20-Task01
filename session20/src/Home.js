@@ -17,7 +17,6 @@ const Home = () => {
         { id: 9, featured: false, new: false, title: "The Air Filter Company", img: "https://img.freepik.com/premium-vector/am-logo-design-vector_705052-363.jpg?w=2000", position: "Frontend Developer", desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit animi aperiam magni a, recusandae assumenda, velit facilis nesciunt eaque blanditiis eius tempora quia corporis delectus consequuntur facere quo. Consequuntur, eius.", createdOn: "1mo ago", enrollment: "Part Time", place: "Worldwide", filters: ["Frontend", "Junior", "React", "Sass", "JavaScript"] }
     ]
 
-    const [data, setData] = useState(myData)
     const [filteredData, setFilteredData] = useState(myData)
     const [filters, setFilters] = useState([])
 
@@ -28,7 +27,7 @@ const Home = () => {
     }
 
     const filterData = () => {
-        setFilteredData(data.filter(obj => filters.every(name => obj.filters.includes(name))))
+        setFilteredData(myData.filter(obj => filters.every(name => obj.filters.includes(name))))
     }
 
     useEffect(() => {
@@ -47,7 +46,7 @@ const Home = () => {
 
     const removeAllFilters = () => {
         setFilters([])
-        setFilteredData(data)
+        setFilteredData(myData)
     }
 
     return (

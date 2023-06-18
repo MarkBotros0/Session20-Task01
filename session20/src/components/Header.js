@@ -2,10 +2,6 @@ import React from 'react'
 
 const Header = ({ filters, removeFilter, removeAllFilters }) => {
 
-    const handleRemoveFilter = (e) => {
-        removeFilter(e.target.parentElement.firstElementChild.innerText)
-    }
-
     return (
         <div className="row" style={{ opacity: filters.length ? "1" : "0.01" }}>
             <div className="col-12">
@@ -14,7 +10,7 @@ const Header = ({ filters, removeFilter, removeAllFilters }) => {
                         {filters.map((filter => (
                             <li key={filter} className='tag-filter'>
                                 <p>{filter}</p>
-                                <span onClick={handleRemoveFilter} className='close-span'>×</span>
+                                <span onClick={() => removeFilter(filter)} className='close-span'>x</span>
                             </li>
                         )))}
                     </ul>
