@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Header = ({ filters, removeFilter, removeAllFilters }) => {
-
     return (
         <div className="row" style={{ opacity: filters.length ? "1" : "0.01" }}>
             <div className="col-12">

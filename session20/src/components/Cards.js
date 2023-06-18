@@ -1,11 +1,6 @@
 import React from 'react'
 
 const Cards = ({ data, addFilter }) => {
-
-  const handleFilterCLick = (e) => {
-    addFilter(e.target.innerText)
-  }
-
   return (
     <div className='row'>
       <ul className="col-12 m-0" id="job-list">
@@ -27,7 +22,7 @@ const Cards = ({ data, addFilter }) => {
                     <h6>{card.position}</h6>
                     <ul className=" tags">{
                       card.filters.map((filter) => (
-                        <li key={filter} onClick={handleFilterCLick}>{filter}</li>
+                        <li key={filter} onClick={() => addFilter(filter)}>{filter}</li>
                       ))}
                     </ul>
                   </div>
